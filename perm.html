@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perm Bulletin - VIM Bulletin Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            display: inline-block;
+        }
+        .buttons a:hover {
+            background-color: #45a049;
+        }
+        .bulletins {
+            /* Здесь будут вставляться объявления */
+        }
+        /* Пример оформления объявлений */
+        .bulletin {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .bulletin h3 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .bulletin p {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>VIM Bulletin Board</h1>
+</header>
+
+<div class="content">
+    <h2>Bulletin to Perm</h2>
+    
+    <div class="buttons">
+        <a href="addbulletin.html">Add Bulletin</a>
+        <a href="searchtown.html">Back to Towns List</a>
+    </div>
+
+    <div class="bulletins">
+        <!-- Здесь будут вставляться объявления -->
+        <!-- Пример объявления (его код можно удалить или оставить для тестов) -->
+        <div class="bulletin">
+            <h3>Example Bulletin Title</h3>
+            <p>This is a brief description of the bulletin. Here, you can provide details of the offer or request.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
