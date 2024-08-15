@@ -5,55 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIM Bulletin Board</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        /* Стили для заставки */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0033CC; /* Цвет фона заставки */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            z-index: 1000; /* Поверх всего остального контента */
         }
-        .container {
+
+        #splash-screen img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* Основной контент страницы, скрыт при загрузке */
+        #main-content {
+            display: none;
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            font-family: Arial, sans-serif;
+            background-color: #0033cc;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 20px;
+
+        #main-content h1 {
+            font-size: 3em;
+            margin: 0;
         }
-        p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
+
+        #main-content p {
+            font-size: 1.5em;
+            margin-top: 20px;
         }
-        .continue-button {
+
+        #main-content a {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 30px;
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
         }
-        .continue-button:hover {
+
+        #main-content a:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Welcome to VIM Bulletin Board</h1>
-    <p>Here you can view ads from your city or region and write your own.</p>
-    <a href="home.html" class="continue-button">Continue</a>
-</div>
+    <!-- Заставка -->
+    <div id="splash-screen">
+        <img src="VIMbb.zastav.png" alt="VIM Bulletin Board">
+    </div>
 
+    <!-- Основной контент -->
+    <div id="main-content">
+        <h1>Welcome to VIM bulletin board</h1>
+        <p>Here you can view ads from your city or by and write</p>
+        <a href="home.html">Continue</a>
+    </div>
+
+    <script>
+        // Скрипт для скрытия заставки и показа основного контента
+        window.onload = function() {
+            const splashScreen = document.getElementById('splash-screen');
+            const mainContent = document.getElementById('main-content');
+
+            // Устанавливаем задержку перед исчезновением заставки
+            setTimeout(function() {
+                splashScreen.style.display = 'none';
+                mainContent.style.display = 'flex';
+            }, 2000); // 2 секунды заставки
+        }
+    </script>
+    
 </body>
 </html>
