@@ -12,16 +12,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #0033CC; /* Цвет фона заставки */
+            background-color: #0033CC; /* Синий фон */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 1000; /* Поверх всего остального контента */
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
-        #splash-screen img {
-            max-width: 80%;
-            height: auto;
+        #splash-screen h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        #splash-screen p {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.2em;
         }
 
         /* Основной контент страницы, скрыт при загрузке */
@@ -69,7 +78,8 @@
 
     <!-- Заставка -->
     <div id="splash-screen">
-        <img src="VIMbb.zastav.png" alt="VIM Bulletin Board">
+        <h1>VIM bulletin board</h1>
+        <p>from VIM system</p>
     </div>
 
     <!-- Основной контент -->
